@@ -1,7 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This code is Programming Assignment 2 for the R Programming Course
+## The purpose of the code is to cache the result from calculating the
+## inverse of a matrix to potentially save computation time.  There are
+## two functions in this code: 1) makeCacheMatrix and 2) cacheSolve.
 
-## Write a short comment describing this function
+## The purpose of makeCacheMatrix is to create a special "matrix" object
+## that can cache its inverse.  The object is really a list to 1) set the
+## values of the matrix, 2) get the value of the matrix, 3) set the value
+## of the matrix inverse and 4) get the value of the matrix inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
   m_inv <- matrix()
@@ -18,7 +23,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The purpose of cacheSolve is to return the value of the matrix inverse
+## if it has already been calculated and cached.  If there is no matrix inverse
+## cached, the function computes the matrix inverse using the solve function.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
